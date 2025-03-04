@@ -1,9 +1,13 @@
-#include "util.h"
+#include "logic.h"
 
 bool check_local_min(int* array, int size)
 {
 	
-	
+	if (size > 1 && array[0] < array[1]
+		|| array[size - 1] < array[size - 2])
+	{
+		return true;
+	}
 
 	for (int i = 1; i < size - 1; i++)
 	{
@@ -14,11 +18,7 @@ bool check_local_min(int* array, int size)
 
 	}
 
-	if (size > 1 && array[0] < array[1]
-		|| array[size - 1] < array[size - 2])
-	{
-		return true;
-	}
+	
 
 	return false;
 

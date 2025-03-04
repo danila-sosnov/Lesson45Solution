@@ -21,7 +21,7 @@ int main()
 	cout << "Does local min exist? " << msg_min << endl;
 	cout << "Does local max exist? " << msg_max << endl;
 	
-
+	delete[] pointer;
 	
 	return 0;
 }
